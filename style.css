@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-text: 'DM Sans', sans-serif;
+    
+    --bg--body: rgb(163, 231, 249);
+    --bg-main: rgb(255, 253, 244);
+    --bg-input: rgb(237, 235, 235);
+
+
+
+    font-size: 62.5%;
+}
+
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+
+    background-color: var(--bg--body);
+}
+
+main {
+    display: grid;
+    gap: 4rem;
+
+    background-color: var(--bg-main);
+    padding: 8rem;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    font-family: var(--ff-text);
+}
+
+header {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+    line-height: 25px;
+}
+
+header p {
+    font-size: 1.4rem;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    
+}
+
+.input.shake {
+    animation: shake 0.5s both;
+}
+
+#input-number {
+    width: 40px;
+    appearance: none;
+    border: none;
+    border-radius: 1rem 0 0 1rem;
+
+    background-color: var(--bg-input);
+    
+    
+}
+
+input[type=tel]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=tel] { 
+    font-family: var(--ff-text);
+    font-size: 1.6rem;
+    padding-left: 1.5rem;
+ }
+
+::placeholder {
+    font-size: 1.6rem;
+    font-family: var(--ff-text);
+}
+
+.screen1 button {
+    width: 80px;
+    height: 50px;
+
+    appearance: none;
+    border: none;
+    border-radius: 0 1rem 1rem 0;
+
+    background-color: rgb(165, 84, 242);
+    color: #fff;
+    font-size: 1.4rem;
+
+    cursor: pointer;
+}
+
+.screen2 button {
+    width: 180px;
+    height: 50px;
+
+    appearance: none;
+    border: none;
+    border-radius: 1rem;
+
+    background-color: rgb(165, 84, 242);
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: var(--ff-text);
+
+    cursor: pointer;
+}
+
+
+.hide {
+    display: none;
+}
+
+@keyframes shake{
+    10%, 60% {
+        transform: translateX(-3px);
+        filter: blur(0.5px);
+    }
+
+    40%, 80% {
+        transform: translateX(3px);
+        filter: blur(0.5px);
+    }
+
+    0%, 100% {
+        transform: translateX(0);
+    }
+}
